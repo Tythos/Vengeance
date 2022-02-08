@@ -10,7 +10,7 @@
 #ifndef VENGEANCE_SPRITE_H
 #define VENGEANCE_SPRITE_H
 
-#include "libArtemisExt.h"
+#include <libArtemis.h>
 
 // Sprite type dteremines roll and row within texture map
 enum spriteType { V_PACMAN, V_RED_G, V_PINK_G, V_BLUE_G, V_ORANGE_G, V_SCARED_G, V_WALLS, V_CONSUMABLE };

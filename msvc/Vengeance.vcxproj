@@ -5,9 +5,17 @@
       <Configuration>Debug</Configuration>
       <Platform>Win32</Platform>
     </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
     <ProjectConfiguration Include="Release|Win32">
       <Configuration>Release</Configuration>
       <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
@@ -17,13 +25,24 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
     <WholeProgramOptimization>false</WholeProgramOptimization>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
@@ -32,7 +51,13 @@
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
@@ -43,11 +68,22 @@
     <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
     <IntDir>$(Configuration)\</IntDir>
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\Users\Brian Kirkpatrick\Projects\SDL\glew\include;C:\Users\Brian Kirkpatrick\Projects\Artemis\ArtemisLib;C:\Users\Brian Kirkpatrick\Projects\SDL\SDL_mixer\include;C:\Users\Brian Kirkpatrick\Projects\SDL\SDL_ttf;C:\Users\Brian Kirkpatrick\Projects\SDL\SDL_image;C:\Users\Brian Kirkpatrick\Projects\SDL\SDL\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\Users\Brian Kirkpatrick\Projects\SDL\glew\include;C:\Users\Brian Kirkpatrick\Projects\Artemis\ArtemisLib;C:\Users\Brian Kirkpatrick\Projects\SDL\SDL_mixer\include;C:\Users\Brian Kirkpatrick\Projects\SDL\SDL_ttf;C:\Users\Brian Kirkpatrick\Projects\SDL\SDL_image;C:\Users\Brian Kirkpatrick\Projects\SDL\SDL\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Users\Brian Kirkpatrick\Projects\SDL\glew\lib\Debug\x64;C:\Users\Brian Kirkpatrick\Projects\Artemis\ArtemisLib\msvc\x64\Debug;C:\Users\Brian Kirkpatrick\Projects\SDL\SDL_ttf\VisualC\x64\Debug;C:\Users\Brian Kirkpatrick\Projects\SDL\SDL_mixer\VisualC\x64\Debug;C:\Users\Brian Kirkpatrick\Projects\SDL\SDL_image\VisualC\x64\Debug;C:\Users\Brian Kirkpatrick\Projects\SDL\SDL\VisualC\x64\Debug;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
     <IntDir>$(Configuration)\</IntDir>
     <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\Users\Brian Kirkpatrick\Projects\SDL\glew\include;C:\Users\Brian Kirkpatrick\Projects\Artemis\ArtemisLib;C:\Users\Brian Kirkpatrick\Projects\SDL\SDL_mixer\include;C:\Users\Brian Kirkpatrick\Projects\SDL\SDL_ttf;C:\Users\Brian Kirkpatrick\Projects\SDL\SDL_image;C:\Users\Brian Kirkpatrick\Projects\SDL\SDL\include;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>C:\Users\Brian Kirkpatrick\Projects\SDL\glew\include;C:\Users\Brian Kirkpatrick\Projects\Artemis\ArtemisLib;C:\Users\Brian Kirkpatrick\Projects\SDL\SDL_mixer\include;C:\Users\Brian Kirkpatrick\Projects\SDL\SDL_ttf;C:\Users\Brian Kirkpatrick\Projects\SDL\SDL_image;C:\Users\Brian Kirkpatrick\Projects\SDL\SDL\include;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -60,10 +96,26 @@
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>C:\Coding\Artemis\ArtemisLib\Debug\ArtemisLib.lib;SDLmain.lib;SDL.lib;SDL_image.lib;SDL_mixer.lib;SDL_ttf.lib;OpenGL32.lib;GLu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ArtemisLib.lib;SDL2main.lib;SDL2.lib;SDL2_image.lib;SDL2_mixer.lib;SDL2_ttf.lib;OpenGL32.lib;GLu32.lib;glew32d.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
       <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>ArtemisLib.lib;SDL2main.lib;SDL2.lib;SDL2_image.lib;SDL2_mixer.lib;SDL2_ttf.lib;OpenGL32.lib;GLu32.lib;glew32d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -78,7 +130,7 @@
       <AdditionalIncludeDirectories>C:\Users\Brian\Projects\SDL2-2.0.4\include;C:\Users\Brian\Projects\SDL2_ttf-2.0.14;C:\Users\Brian\Projects\SDL2_mixer-2.0.1;C:\Users\Brian\Projects\SDL2_image-2.0.1</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>ArtemisLib.lib;C:\Users\Brian\Projects\SDL2-2.0.4\VisualC\Win32\Release\SDL2main.lib;C:\Users\Brian\Projects\SDL2-2.0.4\VisualC\Win32\Release\SDL2.lib;C:\Users\Brian\Projects\SDL2_image-2.0.1\VisualC\Win32\Release\SDL2_image.lib;C:\Users\Brian\Projects\SDL2_mixer-2.0.1\VisualC\Win32\Release\SDL2_mixer.lib;C:\Users\Brian\Projects\SDL2_ttf-2.0.14\VisualC\Win32\Release\SDL2_ttf.lib;OpenGL32.lib;GLu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ArtemisLib.lib;SDL2main.lib;SDL2.lib;SDL2_image.lib;SDL2_mixer.lib;SDL2_ttf.lib;OpenGL32.lib;GLu32.lib;glew32d.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <SubSystem>Windows</SubSystem>
       <OptimizeReferences>true</OptimizeReferences>
@@ -86,25 +138,46 @@
       <TargetMachine>MachineX86</TargetMachine>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="Dice.cpp" />
-    <ClCompile Include="events.cpp">
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
-      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <Optimization>Full</Optimization>
+      <IntrinsicFunctions>false</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalIncludeDirectories>C:\Users\Brian\Projects\SDL2-2.0.4\include;C:\Users\Brian\Projects\SDL2_ttf-2.0.14;C:\Users\Brian\Projects\SDL2_mixer-2.0.1;C:\Users\Brian\Projects\SDL2_image-2.0.1</AdditionalIncludeDirectories>
     </ClCompile>
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="vActor.cpp" />
-    <ClCompile Include="vItem.cpp" />
-    <ClCompile Include="vMaze.cpp" />
-    <ClCompile Include="vSprite.cpp" />
+    <Link>
+      <AdditionalDependencies>ArtemisLib.lib;SDL2main.lib;SDL2.lib;SDL2_image.lib;SDL2_mixer.lib;SDL2_ttf.lib;OpenGL32.lib;GLu32.lib;glew32d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>
+      </EnableCOMDATFolding>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Dice.cpp" />
+    <ClCompile Include="..\events.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\main.cpp" />
+    <ClCompile Include="..\vActor.cpp" />
+    <ClCompile Include="..\vItem.cpp" />
+    <ClCompile Include="..\vMaze.cpp" />
+    <ClCompile Include="..\vSprite.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Dice.h" />
-    <ClInclude Include="libArtemisExt.h" />
-    <ClInclude Include="vActor.h" />
-    <ClInclude Include="vItem.h" />
-    <ClInclude Include="vMaze.h" />
-    <ClInclude Include="vSprite.h" />
+    <ClInclude Include="..\Dice.h" />
+    <ClInclude Include="..\vActor.h" />
+    <ClInclude Include="..\vItem.h" />
+    <ClInclude Include="..\vMaze.h" />
+    <ClInclude Include="..\vSprite.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

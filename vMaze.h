@@ -12,7 +12,7 @@
 #ifndef VENGEANCE_MAZE_H
 #define VENGEANCE_MAZE_H
 
-#include "libArtemisExt.h"
+#include <libArtemis.h>
 #include "Dice.h"
 #include "vItem.h"
 #include "vActor.h"

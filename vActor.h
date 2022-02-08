@@ -11,7 +11,7 @@
 #define VENGEANCE_ACTOR_H
 
 #include "vSprite.h"
-#include "libArtemisExt.h"
+#include "libArtemis.h"
 #include <time.h>
 
 // Several AI modes exist
