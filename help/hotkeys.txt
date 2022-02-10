@@ -1,0 +1,9 @@
+ESC => quit
+` => toggle console
+up/down/left/right arrow keys => movement
+SPC => rotate ghost selection, advance/reset after victory/defeat
+n => generate new maze
+d => output debug information (A* path distances)
+p => toggle pause
+e => execute ability
+b/p/i/c => level blinky/pinky/inky/clyde

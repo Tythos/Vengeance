@@ -57,7 +57,7 @@ vMaze::vMaze() {
 
 	// Load maze textures
 	textures = new aTexture();
-	textures->loadFromFile("textures.png");
+	textures->loadFromFile("..\\resources\\textures.png");
 
 	// Initialize objects
 	squares = NULL;

@@ -318,13 +318,13 @@ int main(int argc, char * argv[]) {
 	// Initialize game
 	game = new aApp();
 	game->hGraphics->setScreen(870, 675, 32);
-	game->hCursor->setVisible(false);
+	game->hCursor->setVisible(false); 
 
 	// We don't want to show the origin coordinate frame for a 2d game
 	game->setOriginVisibility(false);
 
 	// Configure console, fonts
-	game->hConsole->setFont("CONSOLAB.TTF");
+	game->hConsole->setFont("..\\resources\\CONSOLAB.TTF");
 	game->hConsole->setBgColor(0.871f, 0.871f, 0.871f, 1.0f);
 	game->hConsole->setFontColor(0.0f, 0.0f, 0.0f);
 	game->hConsole->setFontSize(0.04f);
@@ -361,20 +361,20 @@ int main(int argc, char * argv[]) {
 	game->gameEvents->createElement(ASTATE_GLOBAL, (*levelClydeTrigger), (*levelClydeAction));
 
 	// Preload music and turn looping off
-	mus1 = game->hSoundboard->loadSong("Start.mp3");
-	mus2 = game->hSoundboard->loadSong("Fail.mp3");
-	mus3 = game->hSoundboard->loadSong("Win.mp3");
+	mus1 = game->hSoundboard->loadSong("..\\resources\\Start.mp3");
+	mus2 = game->hSoundboard->loadSong("..\\resources\\Fail.mp3");
+	mus3 = game->hSoundboard->loadSong("..\\resources\\Win.mp3");
 	game->hSoundboard->repeatSongs = false;
 
 	// Preload sound effects
-	snd1 = game->hSoundboard->loadSound("Hit1.wav");
-	snd2 = game->hSoundboard->loadSound("Hit2.wav");
-	snd3 = game->hSoundboard->loadSound("Pop.wav");
-	snd4 = game->hSoundboard->loadSound("Powerdown.wav");
-	snd5 = game->hSoundboard->loadSound("Powerup.wav");
-	snd6 = game->hSoundboard->loadSound("Bad.wav");
-	snd7 = game->hSoundboard->loadSound("Yay.wav");
-	snd8 = game->hSoundboard->loadSound("Laser.wav");
+	snd1 = game->hSoundboard->loadSound("..\\resources\\Hit1.wav");
+	snd2 = game->hSoundboard->loadSound("..\\resources\\Hit2.wav");
+	snd3 = game->hSoundboard->loadSound("..\\resources\\Pop.wav");
+	snd4 = game->hSoundboard->loadSound("..\\resources\\Powerdown.wav");
+	snd5 = game->hSoundboard->loadSound("..\\resources\\Powerup.wav");
+	snd6 = game->hSoundboard->loadSound("..\\resources\\Bad.wav");
+	snd7 = game->hSoundboard->loadSound("..\\resources\\Yay.wav");
+	snd8 = game->hSoundboard->loadSound("..\\resources\\Laser.wav");
 
 	// Load maze
 	maze = new vMaze();

@@ -4,3 +4,5 @@ Debug/
 Release/
 *.filters
 *.user
+debug.txt
+*.dll
