@@ -1,0 +1,7 @@
+Launching the application requires the presence of several .DLL files in this folder:
+* glew32d.dll
+* libpng16-16.dll (don't ask...)
+* SDL2.dll
+* SDL2_image.dll
+* SDL2_mixer.dll
+* SDL2_ttf.dll

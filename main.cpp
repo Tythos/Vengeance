@@ -376,6 +376,14 @@ int main(int argc, char * argv[]) {
 	snd7 = game->hSoundboard->loadSound("..\\resources\\Yay.wav");
 	snd8 = game->hSoundboard->loadSound("..\\resources\\Laser.wav");
 
+	// before textures are loaded, for newer sdl2_image implementations, we need to img_init with png
+	int imgFlags = IMG_INIT_PNG;
+	if (!(IMG_Init(imgFlags) & imgFlags))
+	{
+		printf("SDL_image could not initialize! SDL_image Error: %s\n", IMG_GetError());
+		return 1;
+	}
+
 	// Load maze
 	maze = new vMaze();
 	maze->newLevel(game->hGraphics);

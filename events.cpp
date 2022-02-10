@@ -27,19 +27,19 @@ void toggleConsoleTarg() {
 }
 
 bool arrowUp() {
-	return game->hKeyboard->checkKey(SDLK_UP);
+	return game->hKeyboard->checkPressDown('w');
 }
 
 bool arrowDown() {
-	return game->hKeyboard->checkKey(SDLK_DOWN);
+	return game->hKeyboard->checkPressDown('s');
 }
 
 bool arrowLeft() {
-	return game->hKeyboard->checkKey(SDLK_LEFT);
+	return game->hKeyboard->checkPressDown('a');
 }
 
 bool arrowRight() {
-	return game->hKeyboard->checkKey(SDLK_RIGHT);
+	return game->hKeyboard->checkPressDown('d');
 }
 
 void moveUp() {
@@ -81,7 +81,7 @@ void newMaze() {
 }
 
 bool pressD() {
-	return game->hKeyboard->checkPressDown('d');
+	return game->hKeyboard->checkPressDown('q');
 }
 
 void outputDebug() {
