@@ -1271,9 +1271,12 @@ void vMaze::update(float dt) {
 	setHorizWall(0);
 	setHorizWall(numH);
 
+	// need to update pacman position first, for overlap reference in later updates
+	int px = (int)(pacman->getX().value);
+	int py = (int)(pacman->getY().value);
+
 	// Update actors
-	int px, py;
-	vActor * currActor = NULL;
+	vActor* currActor = NULL;
 	for (int i = 0; i < 5; i++) {
 		currActor = getActorByType((spriteType)i);
 		if (currActor->getIsAlive()) {
